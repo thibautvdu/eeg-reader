@@ -82,6 +82,7 @@
     <OutDir>bin\</OutDir>
     <IntDir>obj\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>bin\</OutDir>
@@ -95,15 +96,13 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -116,8 +115,6 @@ C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_r
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -125,7 +122,6 @@ C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_r
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -137,8 +133,7 @@ C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_r
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -149,7 +144,6 @@ C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_r
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -161,8 +155,7 @@ C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_r
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -172,7 +165,6 @@ C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_r
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -187,8 +179,11 @@ C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_r
     <ClCompile Include="..\..\..\..\..\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src\ofxSlider.cpp" />
     <ClCompile Include="..\..\..\..\..\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src\ofxSliderGroup.cpp" />
     <ClCompile Include="..\..\..\..\..\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src\ofxToggle.cpp" />
+    <ClCompile Include="src\eegData.cpp" />
+    <ClCompile Include="src\eegHandler.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="src\utilities\advancedString.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src\ofxBaseGui.h" />
@@ -200,7 +195,10 @@ C:\Users\Thibaut\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_r
     <ClInclude Include="..\..\..\..\..\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src\ofxSlider.h" />
     <ClInclude Include="..\..\..\..\..\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src\ofxSliderGroup.h" />
     <ClInclude Include="..\..\..\..\..\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src\ofxToggle.h" />
+    <ClInclude Include="src\eegData.h" />
+    <ClInclude Include="src\eegHandler.h" />
     <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="src\utilities\advancedString.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

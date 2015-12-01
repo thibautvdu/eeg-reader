@@ -31,6 +31,15 @@
     <ClCompile Include="..\..\..\..\..\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src\ofxToggle.cpp">
       <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\eegData.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\eegHandler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utilities\advancedString.cpp">
+      <Filter>src\utilities</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -44,6 +53,9 @@
     </Filter>
     <Filter Include="addons\ofxGui\src">
       <UniqueIdentifier>{b24502a4-5ced-497b-bcd5-0a44ca8e3715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utilities">
+      <UniqueIdentifier>{fe57adbe-601b-43f0-96d3-5e291eee28e9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +88,15 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src\ofxToggle.h">
       <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\eegData.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\eegHandler.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utilities\advancedString.h">
+      <Filter>src\utilities</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
