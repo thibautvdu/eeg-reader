@@ -1,5 +1,7 @@
 #pragma once
 
+#define SIMULATION_MODE true
+
 #include <vector>
 
 /// <summary>
@@ -7,12 +9,14 @@
 /// </summary>
 class eegData {
 	public:
-		eegData();
 		/// <summary>
 		/// Parse a string of values as given by the arduino device
 		/// </summary>
 		/// <param name="values">values sorted and seperated by ','</param>
 		eegData(const std::vector<std::string> values);
+		#ifdef SIMULATION_MODE
+				eegData();
+		#endif
 		~eegData();
 
 		unsigned int SignalQuality;

@@ -183,7 +183,7 @@
     <ClCompile Include="src\eegHandler.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
-    <ClCompile Include="src\utilities\advancedString.cpp" />
+    <ClCompile Include="src\ofxMultiPlot.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Google Drive\Art interactif\of_v0.9.0_vs_release\of_v0.9.0_vs_release\addons\ofxGui\src\ofxBaseGui.h" />
@@ -198,7 +198,8 @@
     <ClInclude Include="src\eegData.h" />
     <ClInclude Include="src\eegHandler.h" />
     <ClInclude Include="src\ofApp.h" />
-    <ClInclude Include="src\utilities\advancedString.h" />
+    <ClInclude Include="src\ofxMultiPlot.h" />
+    <ClInclude Include="src\styleSheet.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
@@ -211,6 +212,17 @@
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
       <AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\data\ofxMultiPlot\crossedLine.frag" />
+    <None Include="bin\data\ofxMultiPlot\crossedLine.geo" />
+    <None Include="bin\data\ofxMultiPlot\crossedLine.vert" />
+    <None Include="bin\data\ofxMultiPlot\dashedLine.frag" />
+    <None Include="bin\data\ofxMultiPlot\dashedLine.geo" />
+    <None Include="bin\data\ofxMultiPlot\dashedLine.vert" />
+    <None Include="bin\data\ofxMultiPlot\dottedLine.frag" />
+    <None Include="bin\data\ofxMultiPlot\dottedLine.geo" />
+    <None Include="bin\data\ofxMultiPlot\dottedLine.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ProjectExtensions>

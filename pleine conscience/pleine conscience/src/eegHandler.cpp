@@ -12,12 +12,26 @@ eegHandler::~eegHandler(){
 }
 
 vector<ofSerialDeviceInfo> eegHandler::getAvailableDevices(){
+	#ifdef SIMULATION_MODE
+		vector<ofSerialDeviceInfo> devices;
+		devices = vector<ofSerialDeviceInfo>(1);
+		devices[0] = ofSerialDeviceInfo("SIMULATION", "SIMULATION", 0);
+
+		return devices;
+	#endif
+
+	vector<ofSerialDeviceInfo> devicesList;
 	_serial.listDevices();
-	vector<ofSerialDeviceInfo> devices = _serial.getDeviceList();
-	return devices;
+	devicesList = _serial.getDeviceList();
+
+	return devicesList;
 }
 
 bool eegHandler::startListeningDevice(string portName){
+	#ifdef SIMULATION_MODE
+		return true;
+	#endif
+
 	bool success = _serial.setup(portName, SERIAL_BUID);
 
 	if(!success){
@@ -31,10 +45,18 @@ bool eegHandler::startListeningDevice(string portName){
 }
 
 bool eegHandler::isReady(){
+	#ifdef SIMULATION_MODE
+		return true;
+	#endif
 	return _serial.isInitialized();
 }
 
 bool eegHandler::update(){
+	#ifdef SIMULATION_MODE
+		_eegDataSets.push(eegData());
+		return true;
+	#endif
+
 	if(!isReady()){
 		ofLogError("eegHandler::update") << "no serial connection";
 		return false;
@@ -46,7 +68,7 @@ bool eegHandler::update(){
 
 		if(endOfLine &&  _buffer.size() > 0){
 			ofLogNotice("eegHandler::update") << _buffer;
-			vector<string> bufferValues = advancedString::split(_buffer, ',');
+			vector<string> bufferValues = ofSplitString(_buffer, ",");
 			_buffer.clear();
 
 			if(bufferValues.size() == eegData::NUMBER_OF_TERMS){

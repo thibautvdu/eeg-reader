@@ -4,6 +4,7 @@
 #include "ofxGui.h"
 
 #include "eegHandler.h"
+#include "ofxMultiPlot.h"
 
 class ofApp : public ofBaseApp{
 
@@ -30,9 +31,13 @@ class ofApp : public ofBaseApp{
 		ofxPanel _deviceSelectPanel;
 		vector<ofxButton> _devicesButtons;
 
+		// STYLE //
+		ofxButton _buttonStyle;
+
 		// DEVICE //
 		eegHandler _eegHeadset;
 
 		// DATA //
 		stringstream _eegSessionBuffer;
+		ofxMultiPlot _multiPlot;
 };

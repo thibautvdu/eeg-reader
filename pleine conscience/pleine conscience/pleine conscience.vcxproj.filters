@@ -37,8 +37,8 @@
     <ClCompile Include="src\eegHandler.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\utilities\advancedString.cpp">
-      <Filter>src\utilities</Filter>
+    <ClCompile Include="src\ofxMultiPlot.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -54,8 +54,14 @@
     <Filter Include="addons\ofxGui\src">
       <UniqueIdentifier>{b24502a4-5ced-497b-bcd5-0a44ca8e3715}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\utilities">
-      <UniqueIdentifier>{fe57adbe-601b-43f0-96d3-5e291eee28e9}</UniqueIdentifier>
+    <Filter Include="bin">
+      <UniqueIdentifier>{090fa2ff-0a21-44ec-ab15-f1f7dcba63cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bin\data">
+      <UniqueIdentifier>{e6034eb8-52b7-4d49-b937-b1b17cf9d133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bin\data\ofxMultiPlot">
+      <UniqueIdentifier>{36736331-350c-41ff-b988-56a0b43f5af3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -95,11 +101,43 @@
     <ClInclude Include="src\eegHandler.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\utilities\advancedString.h">
-      <Filter>src\utilities</Filter>
+    <ClInclude Include="src\ofxMultiPlot.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\styleSheet.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\data\ofxMultiPlot\crossedLine.vert">
+      <Filter>bin\data\ofxMultiPlot</Filter>
+    </None>
+    <None Include="bin\data\ofxMultiPlot\dashedLine.frag">
+      <Filter>bin\data\ofxMultiPlot</Filter>
+    </None>
+    <None Include="bin\data\ofxMultiPlot\dashedLine.geo">
+      <Filter>bin\data\ofxMultiPlot</Filter>
+    </None>
+    <None Include="bin\data\ofxMultiPlot\dashedLine.vert">
+      <Filter>bin\data\ofxMultiPlot</Filter>
+    </None>
+    <None Include="bin\data\ofxMultiPlot\dottedLine.frag">
+      <Filter>bin\data\ofxMultiPlot</Filter>
+    </None>
+    <None Include="bin\data\ofxMultiPlot\dottedLine.geo">
+      <Filter>bin\data\ofxMultiPlot</Filter>
+    </None>
+    <None Include="bin\data\ofxMultiPlot\dottedLine.vert">
+      <Filter>bin\data\ofxMultiPlot</Filter>
+    </None>
+    <None Include="bin\data\ofxMultiPlot\crossedLine.frag">
+      <Filter>bin\data\ofxMultiPlot</Filter>
+    </None>
+    <None Include="bin\data\ofxMultiPlot\crossedLine.geo">
+      <Filter>bin\data\ofxMultiPlot</Filter>
+    </None>
   </ItemGroup>
 </Project>

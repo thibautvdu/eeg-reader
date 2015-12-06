@@ -2,9 +2,6 @@
 
 #include "ofMain.h"
 
-eegData::eegData(){
-}
-
 eegData::eegData(const std::vector<std::string> values){
 	if(values.size() < NUMBER_OF_TERMS){
 		ofLogError("eegData::eegData") << "not enough values supplied";
@@ -23,6 +20,22 @@ eegData::eegData(const std::vector<std::string> values){
 	LowGamma = stoi(values[9]);
 	HighGamma = stoi(values[10]);
 }
+
+#ifdef SIMULATION_MODE
+	eegData::eegData(){
+		SignalQuality = rand() % 1000;
+		Attention = rand() % 1000;
+		Meditation = rand() % 1000;
+		Delta = rand() % 1000;
+		Theta = rand() % 1000;
+		LowAlpha = rand() % 1000;
+		HighAlpha = rand() % 1000;
+		LowBeta = rand() % 1000;
+		HighBeta = rand() % 1000;
+		LowGamma = rand() % 1000;
+		HighGamma = rand() % 1000;
+	}
+#endif
 
 
 eegData::~eegData(){

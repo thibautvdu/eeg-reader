@@ -1,5 +1,7 @@
 #pragma once
 
+#define SIMULATION_MODE true
+
 #include "ofMain.h"
 #include "eegData.h"
 
